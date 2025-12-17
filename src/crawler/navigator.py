@@ -1,4 +1,3 @@
-# src/crawler/services/navigation.py
 from playwright.async_api import Page
 
 class Navigator:

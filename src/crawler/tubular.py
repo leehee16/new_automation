@@ -2,11 +2,7 @@
 from datetime import datetime, timedelta, timezone
 from playwright.async_api import Page
 import re
-
-
-import re
 from datetime import datetime, timezone, timedelta
-from playwright.async_api import Page
 
 class Tubular:
     def __init__(self, page:Page):
