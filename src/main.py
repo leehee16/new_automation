@@ -79,7 +79,13 @@ async def main() -> None:
             logger.info(f"처리 대상: {len(filtered_data)}건")
             logger.info(f"성공: {stats['success']}건")
             logger.info(f"실패: {stats['failed']}건")
-            
+            # 7. 캡처한 유저 관리하는 로직.
+            ## TODO : 이거는 sqlite로 데이터를 저장하는게 나을듯.
+            # 8. 머신러닝을 위한 로직 : 나이 예측, 클래스파이어 모듈. <- 프리트레인으로
+            # 9. 캡처한 데이터 프로세싱하는 로직. 알맞게 저장하는 용도.
+            # 10. 대시보드 로직.
+            # 11. 분류기를 위한 모듈
+
         except Exception as e:
             logger.error(f"실행 중 오류 발생: {e}")
             

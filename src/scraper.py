@@ -220,14 +220,13 @@ async def wait_for_table_loaded(page: Page, min_rows: int = 10, max_wait: int = 
     Returns:
         로딩 성공 여부
     """
-    logger.info(f"테이블 로딩 대기 시작 (최소 {min_rows}행)")
+    logger.info(f"테이블 로딩 대기 시작 ({min_rows}행 인식시)")
     
     for i in range(max_wait):
         row_count = await page.locator('.police-table-row').count()
-        logger.info(f"[{i}초] 테이블 행 개수: {row_count}")
         
         if row_count >= min_rows:
-            logger.info(f"✅ 테이블 로딩 완료: {row_count}개 행")
+            logger.info(f"{i}초 로딩. 테이블 로딩 완료: {row_count}개 행")
             return True
         
         await page.wait_for_timeout(1000)
