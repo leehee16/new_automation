@@ -41,7 +41,7 @@ async def main() -> None:
     # 브라우저 실행
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(
-            headless=True,
+            headless=False,
             slow_mo=500,
         )
         
@@ -85,6 +85,7 @@ async def main() -> None:
             # 9. 캡처한 데이터 프로세싱하는 로직. 알맞게 저장하는 용도.
             # 10. 대시보드 로직.
             # 11. 분류기를 위한 모듈
+            # 12.config yml로 관리
 
         except Exception as e:
             logger.error(f"실행 중 오류 발생: {e}")
